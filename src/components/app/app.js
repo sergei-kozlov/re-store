@@ -1,14 +1,14 @@
 import React from 'react';
+import { withBookstoreService } from '../hoc';
 import Spinner from '../spinner';
 
 import './app.css';
 
-const App = () => {
+
+const App = ({ bookstoreService }) => {
     return (
-        <div>
-            <Spinner/>
-        </div>);
+        <div><Spinner/></div>);
 };
 
-export default App;
+export default withBookstoreService()(App);
 
