@@ -4,7 +4,7 @@ import { withBookstoreService } from '../hoc';
 import Spinner from '../spinner';
 import HomePage from '../pages/home-page';
 import CartPage from '../pages/cart-page';
-
+import ShopHeader from '../shop-header';
 import './app.css';
 
 
@@ -12,7 +12,9 @@ const App = () => {
 
 
     return (
-        <Switch>
+        <main role="main" className="container">
+            <ShopHeader numItems={5} total={210}/>
+         <Switch>
             <Route
             path="/"
             component={HomePage}
@@ -23,6 +25,7 @@ const App = () => {
                 component={CartPage}
             />
         </Switch>
+        </main>
     );
 };
 
